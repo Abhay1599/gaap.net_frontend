@@ -14,11 +14,11 @@
       <ul class="mb-2 navbar-nav me-auto mb-lg-0">
         <!-- 1 -->
         <li class="px-3 nav-item">
-          <a class="px-0 nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" routerLink="dashboard/home" routerLinkActive="active-link">Home</a>
         </li>
         <!-- 2 -->
-        <li class="px-3 nav-item dropdown">
-          <a class="px-0 nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Resources
           </a>
           <ul class="dropdown-menu">
@@ -31,8 +31,8 @@
           </ul>
         </li>
         <!-- 3 -->
-        <li class="px-3 nav-item dropdown">
-          <a class="px-0 nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Professional Development
           </a>
           <ul class="dropdown-menu">
@@ -45,8 +45,8 @@
           </ul>
         </li>
         <!-- 4 -->
-        <li class="px-3 nav-item dropdown">
-          <a class="px-0 nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Services
           </a>
           <ul class="dropdown-menu">
@@ -59,16 +59,15 @@
           </ul>
         </li>
         <!-- 5 -->
-        <li class="px-3 nav-item dropdown">
-          <a class="px-0 nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Company
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">About</a></li>
-            <li><a class="dropdown-item" href="#">Contact</a></li>
+            <li><a class="dropdown-item" routerLink="dashboard/about" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">About</a></li>
+            <li><a class="dropdown-item" routerLink="dashboard/contact" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Contact</a></li>
           </ul>
         </li>
-
       </ul>
       <!-- form -->
       <form class="d-flex" role="search">
