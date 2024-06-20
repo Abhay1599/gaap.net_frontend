@@ -12,60 +12,56 @@
     <!-- menu -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="mb-2 navbar-nav me-auto mb-lg-0">
-        <!-- 1 -->
+        <!-- home -->
         <li class="px-3 nav-item">
           <a class="nav-link" aria-current="page" routerLink="dashboard/home" routerLinkActive="active-link">Home</a>
         </li>
-        <!-- 2 -->
+        <!-- resources -->
         <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Resources
           </a>
+          <!-- dropdown -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" routerLink="resources/business-transition" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Business Transition</a></li>
+            <li><a class="dropdown-item" href="#">Performance MGT</a></li>
+            <li><a class="dropdown-item" href="#">IFRS</a></li>
+            
           </ul>
         </li>
-        <!-- 3 -->
+        <!-- Professional Development -->
         <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Professional Development
           </a>
+          <!-- dropdown -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Workshops</a></li>
+            <li><a class="dropdown-item" href="#">Free Webinars On Demand</a></li>
+            <li><a class="dropdown-item" href="#">Webinars on Demand</a></li>
+            <li><a class="dropdown-item" href="#">Books</a></li>
+            <li><a class="dropdown-item" href="#">ASPE</a></li>
+            <li><a class="dropdown-item" href="#">Petryk’s Picks</a></li>
           </ul>
         </li>
-        <!-- 4 -->
+        <!-- services -->
         <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Services
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Resume Service</a></li>            
           </ul>
         </li>
-        <!-- 5 -->
+        <!-- company -->
         <li class="px-3 nav-item dropdown" routerLinkActive="active-link" #rla="routerLinkActive">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="rla.isActive">
             Company
           </a>
+          <!-- dropdown -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="dashboard/about" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">About</a></li>
-            <li><a class="dropdown-item" routerLink="dashboard/contact" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Contact</a></li>
+            <li><a class="dropdown-item" routerLink="company/about" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">About</a></li>
+            <li><a class="dropdown-item" routerLink="company/contact" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Contact</a></li>
           </ul>
         </li>
       </ul>
