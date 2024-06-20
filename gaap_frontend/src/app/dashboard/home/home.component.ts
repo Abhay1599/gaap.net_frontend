@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { PrimeIcons} from 'primeng/api'
-
+import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [InputTextModule, FloatLabelModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

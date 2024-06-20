@@ -1,3 +1,4 @@
+// carousel
 .carousel-control-next,
 .carousel-control-prev {
   position: relative !important;
@@ -44,9 +45,29 @@
   color: #7c7b7b;
 }
 
-.car-text{
+.car-text {
   gap: 20px;
 }
-.car-inner-txt{
+.car-inner-txt {
   gap: 16px;
+}
+
+// workshop
+.workshop-bg {
+  background-image: url("/assets/workshop.png");
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 296px;
+}
+
+.workshop-input {
+  input {
+    width: 400px;
+    border-radius: 20px;
+    height: 40px;
+  }
+}
+.workshop-gradient {
+  background: linear-gradient(to bottom, white 50%, black 50%);
 }
