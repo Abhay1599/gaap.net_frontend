@@ -1,0 +1,35 @@
+.nav-link,
+.registerbtn {
+  font-size: 16px;
+  color: #999898;
+  letter-spacing: 0.75px;
+}
+
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #1f2937;
+  padding-bottom: 0;
+}
+.register {
+  background-color: #1f2937;
+  color: #fcfbfb;
+  border-radius: 2em;
+}
+/* styles.css */
+.active-link {
+  font-weight: 500;
+  color: #1c75bc;
+  border-bottom:1px solid #1c75bc;
+  padding-bottom: 2px;
+}
+
+.active-dropdown {
+  background-color: #1c74bca6;
+  color:#fff;
+}
+
+.nav-item.dropdown.active-link > .nav-link {
+  font-weight: 500;
+  color: #1c75bc;
+  padding-bottom: 2px;
+}
