@@ -131,7 +131,46 @@
   </div>
 </section>
 <!-- end of carousel section -->
-
+<!-- Articles Section -->
+<section>
+  <div class="container poppins my-5">
+    <h2 class="text-center mb-5">Latest Blog Posts</h2>
+    <div class="row">
+      <div *ngFor="let blog of blogs" class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img *ngIf="blog.image" [src]="'http://localhost:3000/' + blog.image" class="card-img-top" alt="Blog image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-capitalize">{{ blog.title }}</h5>
+            <p class="card-text text-muted">
+              {{ blog.content | slice:0:150 }}...
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex align-items-end">
+            <div class="col-7">
+              <small class="text-capitalize badge text-bg-secondary">
+                {{blog.category}}
+              </small>
+              <br>
+              <small class="text-muted text-capitalize">
+                {{blog.author}}
+              </small>
+              <br>
+              <small class="text-muted">
+                {{ blog.date | date }}
+              </small>
+            </div>
+            <div class="col-5 d-flex justify-content-end">
+              <button pButton type="button" class="btn p-2 btn-dark d-flex align-items-center justify-content-center" style="font-size: 12px;">
+                Read more<i class="pi pi-angle-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of articles section -->
 <!-- workshop -->
 <section class="workshop-gradient d-md-block d-none">
   <div class="container px-5 pt-5 mx-auto mt-5">

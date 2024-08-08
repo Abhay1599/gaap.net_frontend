@@ -24,7 +24,7 @@
           <!-- dropdown -->
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" routerLink="resources/business-transition" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Business Transition</a></li>
-            <li><a class="dropdown-item" href="#">Performance MGT</a></li>
+            <li><a class="dropdown-item" routerLink="resources/performance-management" routerLinkActive="active-link active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Performance MGT</a></li>
             <li><a class="dropdown-item" href="#">IFRS</a></li>
             
           </ul>
@@ -68,12 +68,22 @@
       <!-- form -->
       <form class="d-flex" role="search">
         <div class="row">
-          <div class="text-center col-6 pe-0">
-            <button class="btn registerbtn" type="submit">Login</button>
-          </div>
-          <div class="text-center col-6 ps-0 ">
-            <button class="btn black-pill-btn black-btn" type="submit">Register</button>
-          </div>
+          <ng-container *ngIf="isLoggedIn$ | async; else loggedOut">
+            <div class="text-center col-6 pe-0">
+              <button routerLink="/blogs" class="btn registerbtn" type="button">Blogs</button>
+            </div>
+            <div class="text-center col-6 ps-0">
+              <button (click)="logout()" class="btn black-pill-btn black-btn" type="button">Logout</button>
+            </div>
+          </ng-container>
+          <ng-template #loggedOut>
+            <div class="text-center col-6 pe-0">
+              <button routerLink="/login" class="btn registerbtn" type="button">Login</button>
+            </div>
+            <div class="text-center col-6 ps-0">
+              <button routerLink="/register" class="btn black-pill-btn black-btn" type="button">Register</button>
+            </div>
+          </ng-template>
         </div>
       </form>
     </div>
